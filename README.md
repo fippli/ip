@@ -4,7 +4,7 @@ Terminal command to display your ip in a nice way.
 ## Installation
 Install with [climate](https://fippli.se/cli-mate.sh/)
 ```
-climate install 
+climate install git@github.com:fippli/ip.git
 ```
 
 ## Usage
