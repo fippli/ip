@@ -1,0 +1,11 @@
+IP
+Display your ip
+
+Usage
+ip [options]
+
+Available options
+  --help                        Display this message
+  --global | -g                 Print global ip only
+  --local  | -l                 Print local ip only
+  

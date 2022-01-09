@@ -1,0 +1,5 @@
+NAME=ip
+VERSION=1.0.0
+DESCRIPTION=show your ip
+REPOSITORY=git@github.com:fippli/ip.git
+MAIN=main

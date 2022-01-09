@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
+
+LOCAL_IP="$(ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2)"
+GLOBAL_IP="$(curl -s ifconfig.me)"
+
+case $@ in
+  '--global')
+    echo "${GLOBAL_IP}"
+    ;;
+
+  '-g')
+    echo "${GLOBAL_IP}"
+    ;;
+
+  '--local')
+    echo "${LOCAL_IP}"
+    ;;
+
+  '-l')
+    echo "${LOCAL_IP}"
+    ;;
+
+  '--help')
+    cat "$(dirname "${BASH_SOURCE[0]}")/help.txt"
+    ;;
+
+  *)
+    column -t <<< "LOCAL GLOBAL
+    ${LOCAL_IP} ${GLOBAL_IP}"
+    ;;
+esac
+

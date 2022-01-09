@@ -1,23 +1,51 @@
 # IP
 Terminal command to display your ip in a nice way.
 
-## What is IP?
-It's just a simple script that will output your local and global IP in a nice format.
-Simply run
+## Installation
+Install with [climate](https://fippli.se/cli-mate.sh/)
+```
+climate install 
+```
+
+## Usage
+## Both local and global
 ```bash
 ip
 ```
-in your terminal and you can expect something like
 ```bash
-Local IP  192.168.0.1
-Public IP 192.30.253.112
+LOCAL            GLOBAL
+123.456.789.012  123.456.789.012
 ```
 
-## Installation
-1. 	[Download the zip](https://github.com/fippli/ip/archive/master.zip)
-2.	Unzip it in a folder where you wish to keep the ved project files.
-3.	Open a terminal window and navigate to the location of your ip folder.
-4.	Give the install command permission to be executed by running ```chmod +x install.command```.
-5. 	Double click the install.command file in the ip folder.
-6.	Enter your passphrase.
-7.	Done.
+## Local only
+```bash
+ip --local
+```
+```bash
+123.456.789.012
+```
+
+## Global only
+```bash
+ip --global
+```
+```bash
+123.456.789.012
+```
+
+## Help
+```bash
+ip --help
+```
+```txt
+IP
+Display your ip
+
+Usage
+ip [options]
+
+Available options
+ --help                        Display this message
+ --global | -g                 Print global ip only
+ --local  | -l                 Print local ip only
+```
